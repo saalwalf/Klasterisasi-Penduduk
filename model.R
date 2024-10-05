@@ -25,6 +25,6 @@ data.stds<-scale(data) # Scaling
 fviz_nbclust(data, kmeans, method = 'wss')
 fviz_nbclust(data, kmeans, method = "silhouette")
 
-Clustering <- kmeans(data.stds,centers=6,nstart=25)
+Clustering <- kmeans(data.stds,centers=7,nstart=25)
 
-fviz_cluster(Clustering, geom = 'point', data = data.stds)+ggtitle('k=6')
+fviz_cluster(Clustering, geom = 'point', data = data.stds)+ggtitle('k=7')
